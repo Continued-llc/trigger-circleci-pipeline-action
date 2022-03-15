@@ -12739,6 +12739,11 @@ if (metaData.length > 0) {
   Object.assign(parameters, { GHA_Meta: metaData });
 }
 
+const envWorkflow = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("env-workflow");
+if (envWorkflow.length > 0) {
+  Object.assign(parameters, { env-workflow: envWorkflow });
+}
+
 const body = {
   parameters: parameters,
 };
