@@ -7,7 +7,7 @@ inputs:
   GHA_Meta:
     required: false
     description: 'An optional additional metadata parameter. Will be available on the CircleCI pipeline as GHA_Meta'
-  env-workflow:
+  env_workflow:
     required: false
     description: 'An optional environment parameter'
 runs:

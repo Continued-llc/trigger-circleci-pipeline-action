@@ -12739,9 +12739,9 @@ if (metaData.length > 0) {
   Object.assign(parameters, { GHA_Meta: metaData });
 }
 
-const envWorkflow = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("env-workflow");
+const envWorkflow = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("env_workflow");
 if (envWorkflow.length > 0) {
-  Object.assign(parameters, { env-workflow: envWorkflow });
+  Object.assign(parameters, { env_workflow: envWorkflow });
 }
 
 const body = {
