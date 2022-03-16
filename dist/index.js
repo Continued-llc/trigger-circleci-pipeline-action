@@ -12739,19 +12739,24 @@ if (metaData.length > 0) {
   Object.assign(parameters, { GHA_Meta: metaData });
 }
 
-const envWorkflow = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("env_workflow");
+const envWorkflow = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("env-workflow");
 if (envWorkflow.length > 0) {
-  Object.assign(parameters, { env_workflow: envWorkflow });
+  Object.assign(parameters, { "env-workflow": envWorkflow });
 }
 
-const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront_url");
+const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront-url");
 if (cloudfrontURL.length > 0) {
-  Object.assign(parameters, { cloudfront_url: cloudfrontURL });
+  Object.assign(parameters, { "cloudfront-url": cloudfrontURL });
 }
 
-const previewBucket = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview_bucket");
+const previewBucket = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-bucket");
 if (previewBucket.length > 0) {
-  Object.assign(parameters, { preview_bucket: previewBucket });
+  Object.assign(parameters, { "preview-bucket": previewBucket });
+}
+
+const cloudfrontID = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront-id");
+if (previewBucket.length > 0) {
+  Object.assign(parameters, { "cloudfront-id": cloudfrontID });
 }
 
 const body = {

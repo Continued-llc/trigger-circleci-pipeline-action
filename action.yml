@@ -7,13 +7,16 @@ inputs:
   GHA_Meta:
     required: false
     description: 'An optional additional metadata parameter. Will be available on the CircleCI pipeline as GHA_Meta'
-  env_workflow:
+  env-workflow:
     required: false
     description: 'An optional environment parameter'
-  cloudfront_url:
+  cloudfront-url:
     required: false
     description: 'The Cloudfront URL'
-  preview_bucket:
+  cloudfront-id:
+    required: false
+    description: 'The Cloudfront ID for invalidations'
+  preview-bucket:
     required: false
     description: 'Where the built code should be placed'
 runs:
