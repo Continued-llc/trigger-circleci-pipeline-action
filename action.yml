@@ -10,6 +10,12 @@ inputs:
   env_workflow:
     required: false
     description: 'An optional environment parameter'
+  cloudfront_url:
+    required: false
+    description: 'The Cloudfront URL'
+  preview_bucket:
+    required: false
+    description: 'Where the built code should be placed'
 runs:
   using: 'node12'
   main: 'dist/index.js'

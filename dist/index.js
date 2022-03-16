@@ -12744,6 +12744,16 @@ if (envWorkflow.length > 0) {
   Object.assign(parameters, { env_workflow: envWorkflow });
 }
 
+const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront_url");
+if (cloudfrontURL.length > 0) {
+  Object.assign(parameters, { cloudfront_url: cloudfrontURL });
+}
+
+const previewBucket = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview_bucket");
+if (previewBucket.length > 0) {
+  Object.assign(parameters, { preview_bucket: previewBucket });
+}
+
 const body = {
   parameters: parameters,
 };
