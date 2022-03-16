@@ -12759,6 +12759,11 @@ if (previewBucket.length > 0) {
   Object.assign(parameters, { "preview-cloudfront-id": cloudfrontID });
 }
 
+const deployBundle = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("deploy-bundle");
+if (previewBucket.length > 0) {
+  Object.assign(parameters, { "deploy-bundle": deployBundle });
+}
+
 const body = {
   parameters: parameters,
 };
