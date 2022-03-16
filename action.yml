@@ -19,6 +19,9 @@ inputs:
   preview-bucket:
     required: false
     description: 'Where the built code should be placed'
+  deploy-bundle:
+    required: false
+    description: 'The commit hash of the what should be built'
 runs:
   using: 'node12'
   main: 'dist/index.js'
