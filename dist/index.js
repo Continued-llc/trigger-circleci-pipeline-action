@@ -12744,9 +12744,9 @@ if (envWorkflow.length > 0) {
   Object.assign(parameters, { "env-workflow": envWorkflow });
 }
 
-const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront-url");
+const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-url");
 if (cloudfrontURL.length > 0) {
-  Object.assign(parameters, { "cloudfront-url": cloudfrontURL });
+  Object.assign(parameters, { "preview-cloudfront-url": cloudfrontURL });
 }
 
 const previewBucket = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-bucket");
@@ -12754,9 +12754,9 @@ if (previewBucket.length > 0) {
   Object.assign(parameters, { "preview-bucket": previewBucket });
 }
 
-const cloudfrontID = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("cloudfront-id");
+const cloudfrontID = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-id");
 if (previewBucket.length > 0) {
-  Object.assign(parameters, { "cloudfront-id": cloudfrontID });
+  Object.assign(parameters, { "preview-cloudfront-id": cloudfrontID });
 }
 
 const body = {

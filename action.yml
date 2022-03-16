@@ -10,10 +10,10 @@ inputs:
   env-workflow:
     required: false
     description: 'An optional environment parameter'
-  cloudfront-url:
+  preview-cloudfront-url:
     required: false
     description: 'The Cloudfront URL'
-  cloudfront-id:
+  preview-cloudfront-id:
     required: false
     description: 'The Cloudfront ID for invalidations'
   preview-bucket:
