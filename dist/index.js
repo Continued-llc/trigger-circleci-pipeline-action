@@ -12711,7 +12711,6 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${process.env.GITHUB_SHA}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${process.env.GITHUB_REF}`);
 console.log(payload);
-console.log(parameters);
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
@@ -12776,6 +12775,9 @@ if (previewBucket.length > 0) {
 const body = {
   parameters: parameters,
 };
+
+console.log(parameters);
+console.log(body);
 
 const tag = getTag();
 const branch = getBranch();
