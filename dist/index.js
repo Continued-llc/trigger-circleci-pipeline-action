@@ -624,9 +624,10 @@ class Context {
                 process.stdout.write(`GITHUB_EVENT_PATH ${path} does not exist${os_1.EOL}`);
             }
         }
+        const branchName = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("branch-name")
         this.eventName = process.env.GITHUB_EVENT_NAME;
-        this.sha = '0d0a01580ddd65cc3b99c0287fb94077869cba18';
-        this.ref = '0d0a01580ddd65cc3b99c0287fb94077869cba18';
+        this.sha = process.env.GITHUB_SHA;
+        this.ref = branchName;
         this.workflow = process.env.GITHUB_WORKFLOW;
         this.action = process.env.GITHUB_ACTION;
         this.actor = process.env.GITHUB_ACTOR;
