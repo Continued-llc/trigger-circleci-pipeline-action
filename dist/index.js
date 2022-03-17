@@ -625,7 +625,7 @@ class Context {
             }
         }
         this.eventName = process.env.GITHUB_EVENT_NAME;
-        this.sha = process.env.GITHUB_SHA;
+        this.sha = '0d0a01580ddd65cc3b99c0287fb94077869cba18';
         this.ref = process.env.GITHUB_REF;
         this.workflow = process.env.GITHUB_WORKFLOW;
         this.action = process.env.GITHUB_ACTION;
