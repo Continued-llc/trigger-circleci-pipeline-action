@@ -639,6 +639,7 @@ class Context {
     }
     get issue() {
         const payload = this.payload;
+        payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
         return Object.assign(Object.assign({}, this.repo), { number: (payload.issue || payload.pull_request || payload).number });
     }
     get repo() {
