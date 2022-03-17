@@ -625,8 +625,8 @@ class Context {
             }
         }
         this.eventName = process.env.GITHUB_EVENT_NAME;
-        this.sha = process.env.GITHUB_SHA;
-        this.ref = process.env.GITHUB_REF;
+        this.sha = '6558dc03dbf9f08c528cf53079b7c5f364b7c9c7';
+        this.ref = 'PACM-831-updates-for-deploy-previews';
         this.workflow = process.env.GITHUB_WORKFLOW;
         this.action = process.env.GITHUB_ACTION;
         this.actor = process.env.GITHUB_ACTOR;
@@ -12710,7 +12710,8 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Repo: ${repoName}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${process.env.GITHUB_SHA}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${process.env.GITHUB_REF}`);
-(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T3: ${payload.repository}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T3: ${payload}`);
+console.log(payload)
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
