@@ -12707,6 +12707,7 @@ const payload = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload;
 payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 const pattern = /github\.com\/(repos\/)?(.*)\/(.*)$/gm;
 const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
+payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`URL: ${payload.repository.url}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Org: ${repoOrg}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Repo: ${repoName}`);
