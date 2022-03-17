@@ -12708,8 +12708,9 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`URL: ${payload.repository.url}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Org: ${repoOrg}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Repo: ${repoName}`);
-(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${GITHUB_SHA}`);
-(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${GITHUB_REF}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${process.env.GITHUB_SHA}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${process.env.GITHUB_REF}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T3: ${payload.repository}`);
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
