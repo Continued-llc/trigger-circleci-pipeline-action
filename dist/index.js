@@ -12710,6 +12710,8 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Repo: ${repoName}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${process.env.GITHUB_SHA}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${process.env.GITHUB_REF}`);
+
+console.log("############################## PAYLOAD");
 console.log(payload);
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
@@ -12776,7 +12778,10 @@ const body = {
   parameters: parameters,
 };
 
+console.log("############################## PARAMETERS");
 console.log(parameters);
+
+console.log("############################## BODY");
 console.log(body);
 
 const tag = getTag();
