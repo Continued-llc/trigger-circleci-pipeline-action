@@ -626,7 +626,7 @@ class Context {
         }
         this.eventName = process.env.GITHUB_EVENT_NAME;
         this.sha = process.env.GITHUB_SHA;
-        this.ref = process.env.GITHUB_REF;
+        this.ref = process.env.GITHUB_HEAD_REF;
         this.workflow = process.env.GITHUB_WORKFLOW;
         this.action = process.env.GITHUB_ACTION;
         this.actor = process.env.GITHUB_ACTOR;
@@ -639,7 +639,6 @@ class Context {
     }
     get issue() {
         const payload = this.payload;
-        payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
         return Object.assign(Object.assign({}, this.repo), { number: (payload.issue || payload.pull_request || payload).number });
     }
     get repo() {
@@ -12704,10 +12703,8 @@ __nccwpck_require__.r(__webpack_exports__);
 
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.startGroup)("Preparing CircleCI Pipeline Trigger");
 const payload = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload;
-payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 const pattern = /github\.com\/(repos\/)?(.*)\/(.*)$/gm;
 const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
-payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`URL: ${payload.repository.url}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Org: ${repoOrg}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Repo: ${repoName}`);
