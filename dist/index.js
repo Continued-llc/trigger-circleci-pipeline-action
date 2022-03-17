@@ -613,6 +613,17 @@ class Context {
      * Hydrate the context from the environment
      */
     constructor() {
+        var __webpack_exports__ = {};
+        // This entry need to be wrapped in an IIFE because it need to be in strict mode.
+        (() => {
+        "use strict";
+        __nccwpck_require__.r(__webpack_exports__);
+        /* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(2186);
+        /* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(_actions_core__WEBPACK_IMPORTED_MODULE_0__);
+        /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(5438);
+        /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nccwpck_require__.n(_actions_github__WEBPACK_IMPORTED_MODULE_1__);
+        /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(6545);
+        /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__nccwpck_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
         var _a, _b, _c;
         this.payload = {};
         if (process.env.GITHUB_EVENT_PATH) {
