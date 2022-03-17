@@ -12702,7 +12702,9 @@ __nccwpck_require__.r(__webpack_exports__);
 
 
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.startGroup)("Preparing CircleCI Pipeline Trigger");
+payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 const payload = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload;
+payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
 const pattern = /github\.com\/(repos\/)?(.*)\/(.*)$/gm;
 const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`URL: ${payload.repository.url}`);
@@ -12711,12 +12713,6 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T1: ${process.env.GITHUB_SHA}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`T2: ${process.env.GITHUB_REF}`);
 
-console.log("############################## PAYLOAD");
-console.log(payload);
-
-payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
-console.log("############################## PAYLOAD 2 ");
-console.log(payload);
 
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
