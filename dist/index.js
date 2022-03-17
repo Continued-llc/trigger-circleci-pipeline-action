@@ -12764,6 +12764,11 @@ if (previewBucket.length > 0) {
   Object.assign(parameters, { "deploy-bundle": deployBundle });
 }
 
+const branchName = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("branch-name");
+if (previewBucket.length > 0) {
+  Object.assign(parameters, { "branch-name": branchName });
+}
+
 const body = {
   parameters: parameters,
 };
