@@ -12713,6 +12713,11 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 
 console.log("############################## PAYLOAD");
 console.log(payload);
+
+payload.pull_request.merge_commit_sha = payload.pull_request.head.sha;
+console.log("############################## PAYLOAD 2 ");
+console.log(payload);
+
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
@@ -12778,11 +12783,11 @@ const body = {
   parameters: parameters,
 };
 
-console.log("############################## PARAMETERS");
-console.log(parameters);
+// console.log("############################## PARAMETERS");
+// console.log(parameters);
 
-console.log("############################## BODY");
-console.log(body);
+// console.log("############################## BODY");
+// console.log(body);
 
 const tag = getTag();
 const branch = getBranch();
