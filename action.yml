@@ -22,9 +22,6 @@ inputs:
   deploy-bundle:
     required: false
     description: 'The commit hash of the what should be built'
-  branch-name:
-    required: false
-    description: 'Name of the branch'
 runs:
   using: 'node12'
   main: 'dist/index.js'
