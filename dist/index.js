@@ -12756,17 +12756,17 @@ if (previewBucket.length > 0) {
 }
 
 const cloudfrontID = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-id");
-if (previewBucket.length > 0) {
+if (cloudfrontID.length > 0) {
   Object.assign(parameters, { "preview-cloudfront-id": cloudfrontID });
 }
 
 const deployBundle = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("deploy-bundle");
-if (previewBucket.length > 0) {
+if (deployBundle.length > 0) {
   Object.assign(parameters, { "deploy-bundle": deployBundle });
 }
 
 const branchName = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("deploy-bundle");
-if (previewBucket.length > 0) {
+if (branchName.length > 0) {
   Object.assign(parameters, { "branch-name": branchName });
 }
 
