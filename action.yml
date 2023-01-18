@@ -23,5 +23,5 @@ inputs:
     required: false
     description: 'The commit hash of the what should be built'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
