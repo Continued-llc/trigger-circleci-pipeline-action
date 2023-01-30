@@ -12745,7 +12745,7 @@ if (envWorkflow.length > 0) {
   Object.assign(parameters, { "env-workflow": envWorkflow });
 }
 
-const cdnUrl = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-url");
+const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-url");
 if (cloudfrontURL.length > 0) {
   Object.assign(parameters, { "preview-cloudfront-url": cloudfrontURL });
 }
@@ -12766,8 +12766,8 @@ if (deployBundle.length > 0) {
 }
 
 const previewUrl = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-gateway-url");
-if (callbackRoute.length > 0) {
-  Object.assign(parameters, { "preview-gateway-url": callbackRoute });
+if (previewUrl.length > 0) {
+  Object.assign(parameters, { "preview-gateway-url": previewUrl });
 }
 
 const body = {
