@@ -12745,7 +12745,7 @@ if (envWorkflow.length > 0) {
   Object.assign(parameters, { "env-workflow": envWorkflow });
 }
 
-const cloudfrontURL = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-url");
+const cdnUrl = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-cloudfront-url");
 if (cloudfrontURL.length > 0) {
   Object.assign(parameters, { "preview-cloudfront-url": cloudfrontURL });
 }
@@ -12763,6 +12763,11 @@ if (cloudfrontID.length > 0) {
 const deployBundle = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("deploy-bundle");
 if (deployBundle.length > 0) {
   Object.assign(parameters, { "deploy-bundle": deployBundle });
+}
+
+const previewUrl = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-gateway-url");
+if (callbackRoute.length > 0) {
+  Object.assign(parameters, { "preview-gateway-url": callbackRoute });
 }
 
 const body = {
