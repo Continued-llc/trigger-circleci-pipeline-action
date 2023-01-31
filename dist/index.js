@@ -12765,6 +12765,11 @@ if (deployBundle.length > 0) {
   Object.assign(parameters, { "deploy-bundle": deployBundle });
 }
 
+const previewUrl = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("preview-gateway-url");
+if (previewUrl.length > 0) {
+  Object.assign(parameters, { "preview-gateway-url": previewUrl });
+}
+
 const body = {
   parameters: parameters,
 };

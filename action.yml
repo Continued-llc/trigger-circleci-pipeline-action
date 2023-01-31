@@ -22,6 +22,9 @@ inputs:
   deploy-bundle:
     required: false
     description: 'The commit hash of the what should be built'
+  preview-gateway-url:
+    required: true
+    description: 'API Gateway URL'
 runs:
   using: 'node16'
   main: 'dist/index.js'
