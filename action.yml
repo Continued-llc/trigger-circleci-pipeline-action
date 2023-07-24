@@ -25,6 +25,9 @@ inputs:
   preview-gateway-url:
     required: true
     description: 'API Gateway URL'
+  pdf-gateway-url:
+    required: true
+    description: 'PDF Generator URL'
 runs:
   using: 'node16'
   main: 'dist/index.js'
