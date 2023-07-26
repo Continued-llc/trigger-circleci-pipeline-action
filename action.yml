@@ -28,6 +28,9 @@ inputs:
   pdf-gateway-url:
     required: true
     description: 'PDF Generator URL'
+  pdf-preview-bucket:
+    required: true
+    description: 'PDF Generator Bucket'
 runs:
   using: 'node16'
   main: 'dist/index.js'
