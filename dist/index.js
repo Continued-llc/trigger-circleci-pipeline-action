@@ -12780,6 +12780,11 @@ if (previewUrl.length > 0) {
   Object.assign(parameters, { "preview-gateway-url": previewUrl });
 }
 
+const branchName = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("branch-name");
+if (branchName.length > 0) {
+  Object.assign(parameters, { "branch-name": branchName });
+}
+
 const body = {
   parameters: parameters,
 };
@@ -12802,6 +12807,7 @@ if (tag) {
 const url = `https://circleci.com/api/v2/project/gh/${repoOrg}/${repoName}/pipeline`;
 
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering CircleCI Pipeline for ${repoOrg}/${repoName}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`WILLTEST DEBUG ${branchName}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering URL: ${url}`);
 if (tag) {
   (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering tag: ${tag}`);
