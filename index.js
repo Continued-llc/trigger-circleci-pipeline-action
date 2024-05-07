@@ -63,6 +63,7 @@ if (tag) {
 const url = `https://circleci.com/api/v2/project/gh/${repoOrg}/${repoName}/pipeline`;
 
 info(`Triggering CircleCI Pipeline for ${repoOrg}/${repoName}`);
+info(`WILLTEST INDEX NOT DIST ${process.env.BRANCH_NAME}`);
 info(`Triggering URL: ${url}`);
 if (tag) {
   info(`Triggering tag: ${tag}`);

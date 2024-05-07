@@ -12803,6 +12803,7 @@ const url = `https://circleci.com/api/v2/project/gh/${repoOrg}/${repoName}/pipel
 
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering CircleCI Pipeline for ${repoOrg}/${repoName}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering URL: ${url}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`WILLTEST DEBUG DIST INDEX ${process.env.BRANCH_NAME}`);
 if (tag) {
   (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering tag: ${tag}`);
 } else {
