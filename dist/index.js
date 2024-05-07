@@ -12713,7 +12713,7 @@ const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
   if (process.env.BRANCH_NAME) {
-      return process.env.BRANCH_NAME
+      return process.env.BRANCH_NAME;
   }
   if (ref.startsWith("refs/heads/")) {
     return ref.substring(11);

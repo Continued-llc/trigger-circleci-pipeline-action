@@ -20,7 +20,7 @@ const ref = context.ref;
 
 const getBranch = () => {
   if (process.env.BRANCH_NAME) {
-      return process.env.BRANCH_NAME
+      return process.env.BRANCH_NAME;
   }
   if (ref.startsWith("refs/heads/")) {
     return ref.substring(11);
