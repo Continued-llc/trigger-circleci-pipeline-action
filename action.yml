@@ -31,6 +31,9 @@ inputs:
   pdf-preview-bucket:
     required: true
     description: 'PDF Generator Bucket'
+  branch-name:
+    required: false
+    description: 'Name of the branch'
 runs:
   using: 'node16'
   main: 'dist/index.js'
