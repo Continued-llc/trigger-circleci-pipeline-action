@@ -12712,6 +12712,9 @@ const [, , repoOrg, repoName] = pattern.exec(payload.repository.url);
 const ref = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.ref;
 
 const getBranch = () => {
+  if (process.env.BRANCH_NAME) {
+      return process.env.BRANCH_NAME;
+  }
   if (ref.startsWith("refs/heads/")) {
     return ref.substring(11);
   }
@@ -12803,6 +12806,7 @@ const url = `https://circleci.com/api/v2/project/gh/${repoOrg}/${repoName}/pipel
 
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering CircleCI Pipeline for ${repoOrg}/${repoName}`);
 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering URL: ${url}`);
+(0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`WILLTEST DEBUG DIST INDEX ${process.env.BRANCH_NAME}`);
 if (tag) {
   (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)(`Triggering tag: ${tag}`);
 } else {
